@@ -27,7 +27,7 @@ const TrustedBy = () => {
           <div className="marquee-group">
             {[...creators, ...creators].map((creator, idx) => (
               <div className="creator-card" key={`group1-${idx}`}>
-                <img src={creator.img} alt={creator.name} className="creator-avatar" />
+                <img src={creator.img} alt={creator.name} className="creator-avatar" loading="lazy" />
                 <div className="creator-info">
                   <h3>{creator.name}</h3>
                   <p>{creator.subs}</p>
@@ -38,7 +38,7 @@ const TrustedBy = () => {
           <div className="marquee-group" aria-hidden="true">
             {[...creators, ...creators].map((creator, idx) => (
               <div className="creator-card" key={`group2-${idx}`}>
-                <img src={creator.img} alt={creator.name} className="creator-avatar" />
+                <img src={creator.img} alt={creator.name} className="creator-avatar" loading="lazy" />
                 <div className="creator-info">
                   <h3>{creator.name}</h3>
                   <p>{creator.subs}</p>

@@ -47,7 +47,7 @@ const CaseStudies = () => {
               {/* Left Side: Testimonial */}
               <div className="card-left">
                 <div className="client-header">
-                  <img src={study.client.avatar} alt={study.client.name} className="client-avatar" />
+                  <img src={study.client.avatar} alt={study.client.name} className="client-avatar" loading="lazy" />
                   <div className="client-meta">
                     <h4 className="client-name">{study.client.name}</h4>
                     <p className="client-subs">{study.client.subs}</p>
@@ -70,7 +70,7 @@ const CaseStudies = () => {
                   {study.results.map((res, idx) => (
                     <div className="result-item" key={idx}>
                       <div className="result-thumb-wrapper">
-                        <img src={res.img} alt="Result" className="result-img" />
+                        <img src={res.img} alt="Result" className="result-img" loading="lazy" />
                       </div>
                       <p className="result-title">{res.title}</p>
                       <span className="result-score-badge">{res.score}</span>

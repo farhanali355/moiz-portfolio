@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
                 </div>
                 <p className="review-text">“{item.text}”</p>
                 <div className="author-info">
-                  <img src={item.avatar} alt={item.name} className="author-avatar" />
+                  <img src={item.avatar} alt={item.name} className="author-avatar" loading="lazy" />
                   <div className="author-details">
                     <h5 className="author-name">{item.name}</h5>
                     <span className="author-date">{item.date}</span>
@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
                 </div>
                 <p className="review-text">“{item.text}”</p>
                 <div className="author-info">
-                  <img src={item.avatar} alt={item.name} className="author-avatar" />
+                  <img src={item.avatar} alt={item.name} className="author-avatar" loading="lazy" />
                   <div className="author-details">
                     <h5 className="author-name">{item.name}</h5>
                     <span className="author-date">{item.date}</span>

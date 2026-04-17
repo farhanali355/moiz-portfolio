@@ -63,7 +63,7 @@ const RiseChannels = () => {
               className={`channel-pill ${activeId === channel.id ? 'active' : ''}`}
               onClick={() => setActiveId(channel.id)}
             >
-              <img src={channel.avatar} alt={channel.name} className="pill-avatar" />
+              <img src={channel.avatar} alt={channel.name} className="pill-avatar" loading="lazy" />
               <span className="pill-name">{channel.name}</span>
             </button>
           ))}
@@ -75,7 +75,7 @@ const RiseChannels = () => {
               {/* Left Side: Testimonial */}
               <div className="rise-card-left">
                 <div className="rise-client-header">
-                  <img src={activeChannel.avatar} alt={activeChannel.name} className="rise-client-avatar" />
+                  <img src={activeChannel.avatar} alt={activeChannel.name} className="rise-client-avatar" loading="lazy" />
                   <div className="rise-client-meta">
                     <h4 className="rise-client-name">{activeChannel.name}</h4>
                     <p className="rise-client-subs">{activeChannel.subs}</p>
@@ -98,7 +98,7 @@ const RiseChannels = () => {
                   {activeChannel.results.map((res, idx) => (
                     <div className="rise-result-item" key={idx}>
                       <div className="rise-result-thumb-wrapper">
-                        <img src={res.img} alt="Result" className="rise-result-img" />
+                        <img src={res.img} alt="Result" className="rise-result-img" loading="lazy" />
                       </div>
                       <p className="rise-result-title">{res.title}</p>
                       <span className="rise-result-score-badge">{res.score}</span>

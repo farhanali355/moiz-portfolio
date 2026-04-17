@@ -50,7 +50,7 @@ const PortfolioGrid = () => {
           {portfolioData.slice(0, visibleCount).map((item) => (
             <div className="package-card" key={item.id}>
               <div className="card-thumb-area">
-                <img src={item.img} alt="Thumbnail" className="thumb-img" />
+                <img src={item.img} alt="Thumbnail" className="thumb-img" loading="lazy" />
                 <button className="arrow-float-btn">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#604c1c" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -61,7 +61,7 @@ const PortfolioGrid = () => {
 
               <div className="card-info-area">
                 <div className="author-row">
-                  <img src={item.avatar} alt="Avatar" className="author-avatar" />
+                  <img src={item.avatar} alt="Avatar" className="author-avatar" loading="lazy" />
                   <p className="author-text">{item.title}</p>
                 </div>
                 
