@@ -50,7 +50,7 @@ const Footer = () => {
           {/* Whatsapp Card */}
           <a href="#" className="social-card">
             <div className="social-icon">
-              <img src="/contact-icons/whatsapp.png" alt="Whatsapp Icon" className="social-img-icon" />
+              <img src="/contact-icons/whatsapp.webp" alt="Whatsapp Icon" className="social-img-icon" />
             </div>
             <div className="social-info">
               <h4>Whatsapp</h4>
@@ -67,7 +67,7 @@ const Footer = () => {
           {/* Twitter / X Card */}
           <a href="#" className="social-card">
             <div className="social-icon">
-              <img src="/contact-icons/twitter.png" alt="Twitter/X Icon" className="social-img-icon" />
+              <img src="/contact-icons/twitter.webp" alt="Twitter/X Icon" className="social-img-icon" />
             </div>
             <div className="social-info">
               <h4>Twitter / x</h4>
@@ -84,7 +84,7 @@ const Footer = () => {
           {/* LinkedIn Card */}
           <a href="#" className="social-card">
             <div className="social-icon">
-              <img src="/contact-icons/linkedin.png" alt="LinkedIn Icon" className="social-img-icon" />
+              <img src="/contact-icons/linkedin.webp" alt="LinkedIn Icon" className="social-img-icon" />
             </div>
             <div className="social-info">
               <h4>Linkedin</h4>{/* Exact spelling from image */}

@@ -13,8 +13,8 @@ const caseStudiesData = [
     helpTitle: 'How I helped them?',
     helpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     results: [
-      { img: '/1st-row-images/img-1.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', score: '2.6x' },
-      { img: '/1st-row-images/img-2.jpg', title: 'Lorem ipsum dolor sit amet, consectetur.', score: '2.6x' }
+      { img: '/1st-row-images/img-1.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', score: '2.6x' },
+      { img: '/1st-row-images/img-2.webp', title: 'Lorem ipsum dolor sit amet, consectetur.', score: '2.6x' }
     ]
   },
   {
@@ -28,8 +28,8 @@ const caseStudiesData = [
     helpTitle: 'How I helped them?',
     helpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     results: [
-      { img: '/1st-row-images/img-1.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', score: '2.6x' },
-      { img: '/1st-row-images/img-2.jpg', title: 'Lorem ipsum dolor sit amet, consectetur.', score: '2.6x' }
+      { img: '/1st-row-images/img-1.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', score: '2.6x' },
+      { img: '/1st-row-images/img-2.webp', title: 'Lorem ipsum dolor sit amet, consectetur.', score: '2.6x' }
     ]
   }
 ];

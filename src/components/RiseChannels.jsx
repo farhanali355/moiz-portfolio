@@ -11,8 +11,8 @@ const channelsData = [
     helpTitle: 'How I helped them?',
     helpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     results: [
-      { img: '/1st-row-images/img-1.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', score: '2.6x' },
-      { img: '/1st-row-images/img-2.jpg', title: 'Lorem ipsum dolor sit amet, consectetur.', score: '2.6x' }
+      { img: '/1st-row-images/img-1.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', score: '2.6x' },
+      { img: '/1st-row-images/img-2.webp', title: 'Lorem ipsum dolor sit amet, consectetur.', score: '2.6x' }
     ]
   },
   {
@@ -24,8 +24,8 @@ const channelsData = [
     helpTitle: 'How I helped them?',
     helpDesc: 'We focused on high-contrast storytelling that stops the scroll immediately in a competitive finance niche.',
     results: [
-      { img: '/1st-row-images/img-3.jpg', title: 'Finance niche optimization', score: '3.1x' },
-      { img: '/1st-row-images/img-4.jpg', title: 'CTR improvement analysis.', score: '2.8x' }
+      { img: '/1st-row-images/img-3.webp', title: 'Finance niche optimization', score: '3.1x' },
+      { img: '/1st-row-images/img-4.webp', title: 'CTR improvement analysis.', score: '2.8x' }
     ]
   },
   {
@@ -37,8 +37,8 @@ const channelsData = [
     helpTitle: 'How I helped them?',
     helpDesc: 'Sports commentary requires fast-paced visual hooks. We delivered exactly that.',
     results: [
-      { img: '/1st-row-images/img-5.jpg', title: 'Basketball niche growth', score: '2.2x' },
-      { img: '/1st-row-images/img-6.png', title: 'Viewer retention visuals.', score: '2.5x' }
+      { img: '/1st-row-images/img-5.webp', title: 'Basketball niche growth', score: '2.2x' },
+      { img: '/1st-row-images/img-6.webp', title: 'Viewer retention visuals.', score: '2.5x' }
     ]
   }
 ];

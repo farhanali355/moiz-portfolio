@@ -2,17 +2,17 @@ import React from 'react';
 import './TrustedBy.css';
 
 const creators = [
-  { name: 'Matthew Hussey', subs: '3.4M subscribers', img: '/trusted-by-images/Matthew-Hussey.png' },
-  { name: 'idea soup', subs: '104k subscribers', img: '/trusted-by-images/idea-soup.png' },
-  { name: 'spain revealed', subs: '310k subscribers', img: '/trusted-by-images/spain-revealed.png' },
-  { name: 'yomi denzel', subs: '1.45M subscribers', img: '/trusted-by-images/yumi-denzel.png' },
-  { name: 'henry hoops', subs: '354k subscribers', img: '/trusted-by-images/henry-hoops.png' },
-  { name: 'lewis jackson', subs: '157k subscribers', img: '/trusted-by-images/lewis-jackson.png' },
-  { name: 'dropping in podcast', subs: '123k subscribers', img: '/trusted-by-images/dropping-in-podcast.png' },
-  { name: 'lead gen jay', subs: '77.3k subscribers', img: '/trusted-by-images/lead-gen-jay.png' },
-  { name: 'mr bespecial', subs: '13.6k subscribers', img: '/trusted-by-images/mr-bespecial.png' },
-  { name: 'josh lyons sales', subs: '11.8k subscribers', img: '/trusted-by-images/josh-lyons-sales.png' },
-  { name: 'ole strand', subs: '7.07k subscribers', img: '/trusted-by-images/ole-strand.png' },
+  { name: 'Matthew Hussey', subs: '3.4M subscribers', img: '/trusted-by-images/Matthew-Hussey.webp' },
+  { name: 'idea soup', subs: '104k subscribers', img: '/trusted-by-images/idea-soup.webp' },
+  { name: 'spain revealed', subs: '310k subscribers', img: '/trusted-by-images/spain-revealed.webp' },
+  { name: 'yomi denzel', subs: '1.45M subscribers', img: '/trusted-by-images/yumi-denzel.webp' },
+  { name: 'henry hoops', subs: '354k subscribers', img: '/trusted-by-images/henry-hoops.webp' },
+  { name: 'lewis jackson', subs: '157k subscribers', img: '/trusted-by-images/lewis-jackson.webp' },
+  { name: 'dropping in podcast', subs: '123k subscribers', img: '/trusted-by-images/dropping-in-podcast.webp' },
+  { name: 'lead gen jay', subs: '77.3k subscribers', img: '/trusted-by-images/lead-gen-jay.webp' },
+  { name: 'mr bespecial', subs: '13.6k subscribers', img: '/trusted-by-images/mr-bespecial.webp' },
+  { name: 'josh lyons sales', subs: '11.8k subscribers', img: '/trusted-by-images/josh-lyons-sales.webp' },
+  { name: 'ole strand', subs: '7.07k subscribers', img: '/trusted-by-images/ole-strand.webp' },
 ];
 
 const TrustedBy = () => {

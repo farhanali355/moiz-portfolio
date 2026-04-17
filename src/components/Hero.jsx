@@ -5,11 +5,11 @@ import './Hero.css'
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const images = [
-    '/hero-1.png',
-    // '/hero-2.jpg',
-    '/hero-3.jpg',
-    // '/hero-4.jpg',
-    '/hero-5.jpg'
+    '/hero-1.webp',
+    // '/hero-2.webp',
+    '/hero-3.webp',
+    // '/hero-4.webp',
+    '/hero-5.webp'
   ]
 
   useEffect(() => {

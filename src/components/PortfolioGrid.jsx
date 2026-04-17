@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import './PortfolioGrid.css';
 
 const portfolioData = [
-  { id: 1, img: '/1st-row-images/img-1.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=11', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 2, img: '/1st-row-images/img-2.jpg', title: 'Lorem ipsum dolor sit amet, consectetur.', avatar: 'https://i.pravatar.cc/150?img=12', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 3, img: '/1st-row-images/img-3.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=13', subs: '2.4M subscribers', score: '2.5x' },
-  { id: 4, img: '/1st-row-images/img-4.jpg', title: 'Lorem ipsum dolor sit amet, sit amet.', avatar: 'https://i.pravatar.cc/150?img=14', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 5, img: '/1st-row-images/img-5.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=15', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 6, img: '/1st-row-images/img-6.png', title: 'Lorem ipsum dolor sit amet, consectetur.', avatar: 'https://i.pravatar.cc/150?img=16', subs: '3.4M subscribers', score: '2.0x' },
-  { id: 7, img: '/1st-row-images/img-7.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=17', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 8, img: '/1st-row-images/img-8.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=18', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 9, img: '/1st-row-images/img-9.jpg', title: 'Lorem ipsum dolor sit amet, sit amet.', avatar: 'https://i.pravatar.cc/150?img=19', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 10, img: '/2nd-row-images/img-1.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=21', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 11, img: '/2nd-row-images/img-2.jpg', title: 'Lorem ipsum dolor sit amet, consectetur.', avatar: 'https://i.pravatar.cc/150?img=22', subs: '3.4M subscribers', score: '2.6x' },
-  { id: 12, img: '/2nd-row-images/img-3.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=23', subs: '2.4M subscribers', score: '2.5x' },
+  { id: 1, img: '/1st-row-images/img-1.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=11', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 2, img: '/1st-row-images/img-2.webp', title: 'Lorem ipsum dolor sit amet, consectetur.', avatar: 'https://i.pravatar.cc/150?img=12', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 3, img: '/1st-row-images/img-3.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=13', subs: '2.4M subscribers', score: '2.5x' },
+  { id: 4, img: '/1st-row-images/img-4.webp', title: 'Lorem ipsum dolor sit amet, sit amet.', avatar: 'https://i.pravatar.cc/150?img=14', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 5, img: '/1st-row-images/img-5.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=15', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 6, img: '/1st-row-images/img-6.webp', title: 'Lorem ipsum dolor sit amet, consectetur.', avatar: 'https://i.pravatar.cc/150?img=16', subs: '3.4M subscribers', score: '2.0x' },
+  { id: 7, img: '/1st-row-images/img-7.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=17', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 8, img: '/1st-row-images/img-8.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=18', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 9, img: '/1st-row-images/img-9.webp', title: 'Lorem ipsum dolor sit amet, sit amet.', avatar: 'https://i.pravatar.cc/150?img=19', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 10, img: '/2nd-row-images/img-1.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=21', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 11, img: '/2nd-row-images/img-2.webp', title: 'Lorem ipsum dolor sit amet, consectetur.', avatar: 'https://i.pravatar.cc/150?img=22', subs: '3.4M subscribers', score: '2.6x' },
+  { id: 12, img: '/2nd-row-images/img-3.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', avatar: 'https://i.pravatar.cc/150?img=23', subs: '2.4M subscribers', score: '2.5x' },
 ];
 
 const PortfolioGrid = () => {

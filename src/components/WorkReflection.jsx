@@ -2,42 +2,42 @@ import React from 'react';
 import './WorkReflection.css';
 
 const row1Images = [
-  '/1st-row-images/img-1.jpg',
-  '/1st-row-images/img-2.jpg',
-  '/1st-row-images/img-3.jpg',
-  '/1st-row-images/img-4.jpg',
-  '/1st-row-images/img-5.jpg',
-  '/1st-row-images/img-6.png',
-  '/1st-row-images/img-7.jpg',
-  '/1st-row-images/img-8.jpg',
-  '/1st-row-images/img-9.jpg',
-  '/1st-row-images/img-10.jpg'
+  '/1st-row-images/img-1.webp',
+  '/1st-row-images/img-2.webp',
+  '/1st-row-images/img-3.webp',
+  '/1st-row-images/img-4.webp',
+  '/1st-row-images/img-5.webp',
+  '/1st-row-images/img-6.webp',
+  '/1st-row-images/img-7.webp',
+  '/1st-row-images/img-8.webp',
+  '/1st-row-images/img-9.webp',
+  '/1st-row-images/img-10.webp'
 ];
 
 const row2Images = [
-  '/2nd-row-images/img-1.jpg',
-  '/2nd-row-images/img-2.jpg',
-  '/2nd-row-images/img-3.jpg',
-  '/2nd-row-images/img-4.jpg',
-  '/2nd-row-images/img-5.jpg',
-  '/2nd-row-images/img-6.jpg',
-  '/2nd-row-images/img-7.jpg',
-  '/2nd-row-images/img-8.jpg',
-  '/2nd-row-images/img-9.jpg',
-  '/2nd-row-images/img-10.jpg'
+  '/2nd-row-images/img-1.webp',
+  '/2nd-row-images/img-2.webp',
+  '/2nd-row-images/img-3.webp',
+  '/2nd-row-images/img-4.webp',
+  '/2nd-row-images/img-5.webp',
+  '/2nd-row-images/img-6.webp',
+  '/2nd-row-images/img-7.webp',
+  '/2nd-row-images/img-8.webp',
+  '/2nd-row-images/img-9.webp',
+  '/2nd-row-images/img-10.webp'
 ];
 
 const row3Images = [
-  '/3rd-row-images/img-1.jpg',
-  '/3rd-row-images/img-2.jpg',
-  '/3rd-row-images/img-3.jpg',
-  '/3rd-row-images/img-4.jpg',
-  '/3rd-row-images/img-5.jpg',
-  '/3rd-row-images/img-6.jpg',
-  '/3rd-row-images/img-7.jpg',
-  '/3rd-row-images/img-8.jpg',
-  '/3rd-row-images/img-9.jpg',
-  '/3rd-row-images/img-10.jpg'
+  '/3rd-row-images/img-1.webp',
+  '/3rd-row-images/img-2.webp',
+  '/3rd-row-images/img-3.webp',
+  '/3rd-row-images/img-4.webp',
+  '/3rd-row-images/img-5.webp',
+  '/3rd-row-images/img-6.webp',
+  '/3rd-row-images/img-7.webp',
+  '/3rd-row-images/img-8.webp',
+  '/3rd-row-images/img-9.webp',
+  '/3rd-row-images/img-10.webp'
 ];
 
 const MarqueeRow = ({ images, direction }) => (
