@@ -1,0 +1,255 @@
+.footer-section {
+  width: 100%;
+  padding: 8rem 5% 2rem 5%;
+  background-color: var(--bg-color); /* Matches page perfectly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header & Text */
+.footer-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.footer-header h2 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+
+/* Toast Alert Popup */
+.toast-alert {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #161616;
+  border: 1px solid rgba(185, 151, 91, 0.4);
+  padding: 1.2rem 2.2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.05rem;
+  z-index: 9999;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 15px 25px -15px rgba(185, 151, 91, 0.4);
+  animation: slideDownFade 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideDownFade {
+  0% { opacity: 0; transform: translate(-50%, -30px); }
+  100% { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.highlight-gold {
+  color: #b9975b; /* Extracted exact flatter gold hex */
+}
+
+/* Base button styles matching reference perfectly */
+.get-in-touch-btn {
+  margin-top: 2.5rem;
+  padding: 0.95rem 3rem;
+  border-radius: 40px;
+  background: rgba(30, 25, 18, 0.5); /* Muddy gold tint */
+  border: 1px solid rgba(185, 151, 91, 0.4);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 25px 45px -20px rgba(185, 151, 91, 0.6), 0 0 20px rgba(185, 151, 91, 0.05);
+}
+
+.get-in-touch-btn:hover {
+  background: rgba(185, 151, 91, 0.15);
+  border-color: rgba(185, 151, 91, 0.8);
+  box-shadow: inset 0 25px 45px -20px rgba(185, 151, 91, 0.8), 0 0 25px rgba(185, 151, 91, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Social Cards Grid */
+.social-cards {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.social-card {
+  flex: 1;
+  background: #151414; /* Deep flat charcoal */
+  border: 1px solid rgba(185, 151, 91, 0.15); /* Slightly visible border to contain the shadow */
+  border-radius: 24px; /* More rounded to match target exactly */
+  padding: 2.2rem 2.2rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: inset 0 45px 65px -35px rgba(185, 151, 91, 0.3); /* Massive diffuse top inner glow */
+}
+
+.social-card:hover {
+  border-color: rgba(185, 151, 91, 0.4);
+  transform: translateY(-5px);
+  box-shadow: inset 0 45px 65px -35px rgba(185, 151, 91, 0.45), 0 15px 30px rgba(0,0,0,0.6);
+  background: #171616;
+}
+
+.social-icon {
+  margin-bottom: 4.0rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.social-img-icon {
+  width: 44px; /* Icon size matching original SVGs */
+  height: 44px;
+  object-fit: contain;
+}
+
+.social-info h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.2px;
+}
+
+.social-info p {
+  color: #999999;
+  font-size: 0.95rem;
+}
+
+.social-arrow {
+  position: absolute;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  transition: transform 0.3s ease;
+  opacity: 0.9;
+}
+
+.social-card:hover .social-arrow {
+  transform: translate(4px, -4px);
+  stroke: #ffffff;
+}
+
+/* Email CTA Box */
+.email-cta-box {
+  width: 100%;
+  background: linear-gradient(90deg, #121212 0%, rgba(38, 28, 15, 0.7) 100%);
+  border: 1px solid rgba(185, 151, 91, 0.15); /* Faint gold border wrap */
+  border-radius: 50px;
+  padding: 0.7rem 0.7rem 0.7rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  box-shadow: inset 0 35px 55px -25px rgba(185, 151, 91, 0.35); /* Extremely clear diffuse top glow */
+}
+
+.email-text {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex: 1;
+}
+
+.email-label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.email-input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.05rem;
+  outline: none;
+  font-family: inherit;
+  width: 100%;
+}
+
+.email-input::placeholder {
+  color: #666666;
+}
+
+.send-email-btn {
+  padding: 0.95rem 2.8rem;
+  border-radius: 40px;
+  background: rgba(185, 151, 91, 0.2); /* Stronger gold/brown */
+  border: 1px solid rgba(185, 151, 91, 0.4);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 20px 35px -15px rgba(185, 151, 91, 0.7); /* Diffuse button inner top glow */
+}
+
+.send-email-btn:hover {
+  background: rgba(185, 151, 91, 0.35);
+  border-color: rgba(185, 151, 91, 0.8);
+  transform: scale(1.02);
+  box-shadow: inset 0 20px 35px -15px rgba(185, 151, 91, 0.9);
+}
+
+/* Footer Copyright */
+.footer-copyright {
+  color: #666666; /* Correctly tuned grey */
+  font-size: 0.85rem;
+  margin-top: 4rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 800px) {
+  .footer-header h2 {
+    font-size: 2rem;
+  }
+  
+  .social-cards {
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    margin-bottom: 2rem;
+  }
+  
+  .email-cta-box {
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 20px;
+    gap: 1.5rem;
+  }
+  
+  .email-text {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .send-email-btn {
+    width: 100%;
+  }
+}

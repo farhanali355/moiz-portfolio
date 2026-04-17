@@ -1,0 +1,192 @@
+.case-studies-section {
+  width: 100%;
+  padding: 6rem 5%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+}
+
+.case-studies-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section-main-title {
+  font-family: 'Barlow', sans-serif;
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.case-studies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.case-study-card {
+  background: linear-gradient(180deg, rgba(159, 159, 159, 0.08) 0%, rgba(13, 12, 12, 0) 50%), #0d0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 32px;
+  padding: 3.5rem;
+  display: flex;
+  gap: 3.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Ensures gradient stays inside corners */
+}
+
+.case-study-card:hover {
+  border-color: rgba(185, 151, 91, 0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Left Section */
+.card-left {
+  flex: 0.8;
+}
+
+.client-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.client-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.client-subs {
+  font-family: 'Poppins', sans-serif;
+  color: #8c8c8c;
+  font-size: 0.85rem;
+}
+
+.testimonial-text {
+  font-family: 'Poppins', sans-serif;
+  color: #c7c7c7;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-style: normal;
+  margin: 0;
+}
+
+/* Divider */
+.card-divider-vertical {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  height: auto;
+}
+
+/* Right Section */
+.card-right {
+  flex: 1.2;
+}
+
+.help-title {
+  font-family: 'Barlow', sans-serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.help-desc {
+  font-family: 'Poppins', sans-serif;
+  color: #8c8c8c;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.results-gallery {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.result-item {
+  flex: 1;
+}
+
+.result-thumb-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.result-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-title {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.result-score-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(185, 151, 91, 0.1);
+  border-radius: 50px;
+  color: #8c8c8c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .case-study-card {
+    flex-direction: column;
+    padding: 2.5rem;
+    gap: 2.5rem;
+  }
+  
+  .card-divider-vertical {
+    width: 100%;
+    height: 1px;
+  }
+  
+  .card-left, .card-right {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-main-title {
+    font-size: 2.2rem;
+  }
+  .results-gallery {
+    flex-direction: column;
+  }
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+}

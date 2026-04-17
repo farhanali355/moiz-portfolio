@@ -1,0 +1,152 @@
+.work-reflection-section {
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  overflow-x: hidden;
+}
+
+.reflection-container {
+  width: 90%;
+  max-width: 1100px;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.5) 0%, rgba(13, 12, 12, 0) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  /* Subtle top glow */
+  border-radius: 20px;
+  padding-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reflection-header {
+  margin-bottom: 4.5rem;
+}
+
+.reflection-header h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.reflection-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* Break out to full screen width */
+  width: 100vw;
+  /* Removed mask to prevent cut off images strictly at edges */
+}
+
+.reflection-marquee {
+  width: 100%;
+  position: relative;
+}
+
+.reflection-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.reflection-group {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+}
+
+/* Animations */
+.reflection-marquee.left .reflection-track {
+  animation: scroll-left 45s linear infinite;
+}
+
+.reflection-marquee.right .reflection-track {
+  animation: scroll-right 45s linear infinite;
+}
+
+.reflection-marquee:hover .reflection-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.thumbnail-card {
+  width: 380px;
+  height: 214px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* slight border */
+  flex-shrink: 0;
+  background: #0d0d0d;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.thumbnail-card:hover {
+  transform: scale(1.03);
+  border-color: rgba(199, 168, 86, 0.6);
+  /* gold border on hover */
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.thumbnail-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail-card:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .thumbnail-card {
+    width: 320px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reflection-container {
+    padding-top: 3rem;
+  }
+
+  .thumbnail-card {
+    width: 260px;
+    height: 146px;
+  }
+
+  .reflection-header h2 {
+    font-size: 2rem;
+  }
+}
