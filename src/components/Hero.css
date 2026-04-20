@@ -1,0 +1,206 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 100px);
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 3.8rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.text-highlight {
+  color: #c7a856;
+  /* Match exact muted gold color */
+}
+
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  color: #d9d9d9;
+  /* Very light gray */
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.btn-primary {
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, rgba(199, 168, 86, 0.35) 0%, rgba(199, 168, 86, 0.1) 100%);
+  transform: translateY(-2px);
+  border-color: #c7a856;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(180deg, rgba(199, 168, 86, 0.35) 0%, rgba(199, 168, 86, 0.1) 100%);
+  border-color: #c7a856;
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px; /* Enhanced 3D depth */
+  position: relative;
+}
+
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(185, 151, 91, 0.12) 0%, rgba(13, 12, 12, 0) 70%);
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.card-stack {
+  position: relative;
+  width: 500px;
+  height: 320px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Base centering like Framer variants */
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1); /* Professional Framer-style curve */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  will-change: transform, width, height, opacity;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card.offset-0 {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 1;
+  filter: brightness(1) drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
+  transform: translate(-50%, -50%) translateY(0) translateZ(0);
+}
+
+.card.offset-1 {
+  /* Bottom-Back 1: Rising from the bottom */
+  width: 95%;
+  height: 110%;
+  z-index: 8;
+  opacity: 0.9;
+  filter: brightness(0.85);
+  transform: translate(-50%, -50%) translateY(35px) translateZ(-60px);
+}
+
+.card.offset-2 {
+  /* Bottom-Back 2: Deepest at the bottom */
+  width: 90%;
+  height: 120%;
+  z-index: 5;
+  opacity: 0.6;
+  filter: brightness(0.65);
+  transform: translate(-50%, -50%) translateY(70px) translateZ(-120px);
+}
+
+.card.offset-3 {
+  /* Top-Back 2: Deepest at the top (entering background cycle) */
+  width: 90%;
+  height: 120%;
+  z-index: 1;
+  opacity: 0.3;
+  filter: brightness(0.4);
+  transform: translate(-50%, -50%) translateY(-70px) translateZ(-120px);
+}
+
+.card.offset-4 {
+  /* Top-Back 1: Exiting via top */
+  width: 95%;
+  height: 110%;
+  z-index: 3;
+  opacity: 0.7;
+  filter: brightness(0.6);
+  transform: translate(-50%, -50%) translateY(-35px) translateZ(-60px);
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-visual {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .card-stack {
+    width: 350px;
+    height: 220px;
+  }
+}

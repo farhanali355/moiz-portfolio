@@ -1,0 +1,229 @@
+.rise-channels-section {
+  width: 100%;
+  padding: 6rem 5% 10rem 5%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+}
+
+.rise-channels-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.rise-section-title {
+  font-family: 'Barlow', sans-serif;
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Navigation Pills */
+.channel-pills {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.channel-pill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #0d0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 0.6rem 1.5rem 0.6rem 0.6rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pill-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pill-name {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.channel-pill.active {
+  background: rgba(185, 151, 91, 0.1);
+  border: 1px solid #b9975b;
+  box-shadow: 0 0 15px rgba(185, 151, 91, 0.2);
+}
+
+.channel-pill:hover:not(.active) {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Reusing / Matching Split-Card Logic */
+.rise-case-card {
+  background: linear-gradient(180deg, rgba(159, 159, 159, 0.08) 0%, rgba(13, 12, 12, 0) 50%), #0d0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 32px;
+  padding: 3.5rem;
+  display: flex;
+  gap: 3.5rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Left Section */
+.rise-card-left {
+  flex: 0.8;
+}
+
+.rise-client-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.rise-client-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rise-client-name {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.rise-client-subs {
+  font-family: 'Poppins', sans-serif;
+  color: #8c8c8c;
+  font-size: 0.85rem;
+}
+
+.rise-testimonial-text {
+  font-family: 'Poppins', sans-serif;
+  color: #c7c7c7;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-style: normal;
+  margin: 0;
+}
+
+/* Divider */
+.rise-card-divider-vertical {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  height: auto;
+}
+
+/* Right Section */
+.rise-card-right {
+  flex: 1.2;
+}
+
+.rise-help-title {
+  font-family: 'Barlow', sans-serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.rise-help-desc {
+  font-family: 'Poppins', sans-serif;
+  color: #8c8c8c;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.rise-results-gallery {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.rise-result-item {
+  flex: 1;
+}
+
+.rise-result-thumb-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rise-result-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rise-result-title {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rise-result-score-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(185, 151, 91, 0.1);
+  border-radius: 50px;
+  color: #8c8c8c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .rise-case-card {
+    flex-direction: column;
+    padding: 2.5rem;
+    gap: 2.5rem;
+  }
+  
+  .rise-card-divider-vertical {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rise-section-title {
+    font-size: 2.2rem;
+  }
+  .rise-results-gallery {
+    flex-direction: column;
+  }
+  .channel-pills {
+    gap: 1rem;
+  }
+  .pill-name {
+    display: none; /* Only show avatar on very small screens or let it wrap */
+  }
+  .channel-pill {
+    padding: 0.4rem;
+  }
+}

@@ -1,0 +1,178 @@
+.p-work-reflection-section {
+  width: 100%;
+  padding: 8rem 0;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Layer: Full-width rows */
+.p-reflection-rows-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 15rem; /* Slightly more space */
+  z-index: 1;
+  position: relative;
+}
+
+.p-reflection-rows-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #0d0c0c 20%, rgba(13, 12, 12, 0) 40%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Global Vignette Overlay - Massive tunnel effect */
+.p-reflection-vignette-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, #0d0c0c 0%, rgba(13, 12, 12, 0) 40%, rgba(13, 12, 12, 0) 60%, #0d0c0c 100%),
+    linear-gradient(to right, #0d0c0c 0%, rgba(13, 12, 12, 0) 15%, rgba(13, 12, 12, 0) 85%, #0d0c0c 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Centered Decorative Frame & Header */
+.p-reflection-framed-overlay {
+  position: absolute;
+  top: 4rem; /* Aligns with section padding */
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px; /* The "Box" width */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  z-index: 10;
+  pointer-events: none; /* Allows scrolling rows through the frame if needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.p-reflection-header {
+  pointer-events: auto; /* Re-enable for the button */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.p-reflection-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.p-hire-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 0.9rem 2.5rem;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.p-hire-btn:hover {
+  background: linear-gradient(180deg, rgba(199, 168, 86, 0.35) 0%, rgba(199, 168, 86, 0.1) 100%);
+  border-color: #c7a856;
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Marquee Row Style */
+.p-reflection-marquee {
+  width: 100%;
+}
+
+.p-reflection-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+}
+
+.p-reflection-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Animations */
+.p-reflection-marquee.left .p-reflection-track {
+  animation: p-scroll-left 60s linear infinite;
+}
+
+.p-reflection-marquee.right .p-reflection-track {
+  animation: p-scroll-right 60s linear infinite;
+}
+
+@keyframes p-scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); }
+}
+
+@keyframes p-scroll-right {
+  0% { transform: translateX(calc(-50% - 0.75rem)); }
+  100% { transform: translateX(0); }
+}
+
+.p-thumbnail-card {
+  width: 420px;
+  height: 236px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+  background: #0d0d0d;
+}
+
+.p-thumbnail-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .p-reflection-title {
+    font-size: 2.5rem;
+  }
+  .p-thumbnail-card {
+    width: 320px;
+    height: 180px;
+  }
+  .p-reflection-framed-overlay {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .p-reflection-title {
+    font-size: 2rem;
+  }
+  .p-reflection-framed-overlay {
+    padding-top: 3rem;
+  }
+}
