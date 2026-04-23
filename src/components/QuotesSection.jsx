@@ -2,18 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './QuotesSection.css';
 
 const quotes = [
-  { text: "Marketing is no longer about the stuff you make, but about the stories you tell.", author: "Seth Godin" },
-  { text: "What you show is more important than what you say.", author: "David Ogilvy" },
-  { text: "Design is the silent ambassador of your brand.", author: "Paul Rand" },
-  { text: "If we are paying attention to something, it’s important.", author: "Robert Cialdini" },
-  { text: "Good design is actually a lot harder to notice than poor design.", author: "Donald A. Norman" },
-  { text: "Design is really an act of communication.", author: "Donald A. Norman" },
-  { text: "Properly practiced creativity can make one ad do the work of ten.", author: "William Bernbach" },
-  { text: "Good design is as little as possible.", author: "Donald A. Norman" },
-  { text: "Design is really an act of communication.", author: "Donald A. Norman" },
-  { text: "Properly practiced creativity can make one ad do the work of ten.", author: "William Bernbach" },
+  { text: "Design is how it works.", author: "Steve Jobs" },
   { text: "Good design is as little as possible.", author: "Dieter Rams" },
-  { text: "esign is how it works.", author: "Steve Jobs" }
+  { text: "What you say in advertising is more important than how you say it.", author: "David Ogilvy" },
+  { text: "Properly practiced creativity can make one ad do the work of ten.", author: "William Bernbach" },
+  { text: "Design is really an act of communication.", author: "Donald A. Norman" },
+  { text: "Good design is actually a lot harder to notice than poor design.", author: "Donald A. Norman" },
+  { text: "If we are paying attention to something, it’s important.", author: "Robert Cialdini" },
+  { text: "Marketing is no longer about the stuff you make, but about the stories you tell.", author: "Seth Godin" },
+  { text: "Design is the silent ambassador of your brand.", author: "Paul Rand" },
+  { text: "What you show is more important than what you say.", author: "David Ogilvy" },
 ];
 
 const QuotesSection = () => {

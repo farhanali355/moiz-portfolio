@@ -1,7 +1,8 @@
 .portfolio-grid-section {
   width: 100%;
   padding: 4rem 5%;
-  background-color: var(--bg-color); /* main black */
+  background-color: var(--bg-color);
+  /* main black */
   display: flex;
   justify-content: center;
 }
@@ -51,26 +52,71 @@
   margin-top: 1rem;
 }
 
-.category-select-btn {
-  background: rgba(30, 26, 20, 0.4); /* Muted brownish tint */
-  border: 1px solid rgba(185, 151, 91, 0.25); /* Very thin subtle gold border */
-  color: #ffffff;
-  padding: 0.8rem 1.8rem;
-  border-radius: 50px; /* Pillow/Pill shape */
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
+.category-dropdown-container {
+  position: relative;
+  min-width: 200px;
 }
 
-.category-select-btn:hover {
-  background: rgba(185, 151, 91, 0.15);
-  border-color: rgba(185, 151, 91, 0.4);
+.category-select-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(199, 168, 86, 0.3);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.category-select-btn:hover, .category-select-btn.active {
+  background: rgba(199, 168, 86, 0.1);
+  border-color: #c7a856;
+  box-shadow: 0 0 15px rgba(199, 168, 86, 0.2);
+}
+
+.category-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 100%;
+  background: #111111;
+  border: 1px solid rgba(199, 168, 86, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: dropdownFade 0.3s ease-out;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.category-item {
+  padding: 12px 20px;
+  color: #a3a3a3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.category-item:hover {
+  background: rgba(199, 168, 86, 0.1);
+  color: #c7a856;
+}
+
+.category-item.selected {
+  background: rgba(199, 168, 86, 0.2);
+  color: #c7a856;
+  font-weight: 600;
 }
 
 /* Grid Layout */
@@ -95,7 +141,8 @@
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 18px;
-  overflow: visible; /* button overlaps out */
+  overflow: visible;
+  /* button overlaps out */
   margin-bottom: 1.2rem;
 }
 
@@ -114,8 +161,10 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #b9975b; /* Solid golden base */
-  border: 6px solid #0d0c0c; /* Matches page background to look like it cuts out */
+  background: #b9975b;
+  /* Solid golden base */
+  border: 6px solid #0d0c0c;
+  /* Matches page background to look like it cuts out */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -207,6 +256,19 @@
   font-size: 0.7rem;
   color: #8c8c8c;
   font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stat-box:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.stat-box.active {
+  background: #b9975b;
+  color: #000000;
+  font-weight: 700;
 }
 
 /* Load More Button */
@@ -242,11 +304,29 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* Skeleton Loading */
+.package-card.skeleton {
+  height: 400px;
+  background: linear-gradient(90deg, #151414 25%, #1a1a1a 50%, #151414 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
 
 @media (max-width: 850px) {
   .grid-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .portfolio-grid-header {
     flex-direction: column;
     align-items: flex-start;
@@ -258,6 +338,7 @@
   .grid-wrapper {
     grid-template-columns: 1fr;
   }
+
   .grid-title {
     font-size: 2rem;
   }

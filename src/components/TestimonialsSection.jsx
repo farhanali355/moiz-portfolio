@@ -27,7 +27,7 @@ const testimonials = [
     avatar: "/trusted-by-images/lead-gen-jay.webp"
   },
   {
-    text: "I recently had the pleasure of working with Moiz, and I couldn't be more impressed! His exceptional skills as a thumbnail editor truly elevated my content. Each thumbnail he crafted was visually striking and perfectly captured the essence of my videos, significantly boosting viewer engagement. Moiz was professional, responsive to feedback, and delivered high-quality work ahead of schedule. If you'",
+    text: "I recently had the pleasure of working with Moiz, and I couldn't be more impressed! His exceptional skills as a thumbnail editor truly elevated my content. Each thumbnail he crafted was visually striking and perfectly captured the essence of my videos, significantly boosting viewer engagement. Moiz was professional, responsive to feedback, and delivered high-quality work ahead of schedule. Highly recommend!",
     name: "Lewis Jackson",
     date: "Aug 2022 - Jul 2024",
     avatar: "/trusted-by-images/lewis-jackson.webp"

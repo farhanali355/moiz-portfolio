@@ -34,7 +34,7 @@
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: scroll 25s linear infinite;
+  animation: scroll 70s linear infinite;
   gap: 1.5rem;
 }
 

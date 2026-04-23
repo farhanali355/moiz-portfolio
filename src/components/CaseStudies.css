@@ -35,12 +35,13 @@
   gap: 3.5rem;
   position: relative;
   transition: all 0.3s ease;
-  overflow: hidden; /* Ensures gradient stays inside corners */
+  overflow: hidden;
+  /* Ensures gradient stays inside corners */
 }
 
 .case-study-card:hover {
   border-color: rgba(185, 151, 91, 0.2);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Left Section */
@@ -167,13 +168,14 @@
     padding: 2.5rem;
     gap: 2.5rem;
   }
-  
+
   .card-divider-vertical {
     width: 100%;
     height: 1px;
   }
-  
-  .card-left, .card-right {
+
+  .card-left,
+  .card-right {
     flex: none;
     width: 100%;
   }
@@ -183,9 +185,11 @@
   .section-main-title {
     font-size: 2.2rem;
   }
+
   .results-gallery {
     flex-direction: column;
   }
+
   .testimonial-text {
     font-size: 1.1rem;
   }

@@ -21,7 +21,11 @@ body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
   overflow-x: hidden;
+  width: 100%;
 }
 
 a {

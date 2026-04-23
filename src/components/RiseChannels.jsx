@@ -1,56 +1,158 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { fetchChannelData } from '../utils/youtubeApi';
 import './RiseChannels.css';
 
 const channelsData = [
   {
     id: 'matthew',
+    channelId: 'UC9HGzFGt7BLmWDqooUbWGBg', // Matthew Hussey
     name: 'Matthew Hussey',
-    avatar: 'https://i.pravatar.cc/150?img=33',
+    avatar: '/trusted-by-images/Matthew-Hussey.webp',
     subs: '3.4M subscribers',
-    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+    quote: "Moiz is great to work with! Communicative, creative and takes feedback really well. I would strongly recommend him!",
     helpTitle: 'How I helped them?',
-    helpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    helpDesc: 'Helped Matthew scale his content reach by designing high-CTR thumbnails that capture the curiosity of a global audience.',
     results: [
-      { img: '/1st-row-images/img-1.webp', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', score: '2.6x' },
-      { img: '/1st-row-images/img-2.webp', title: 'Lorem ipsum dolor sit amet, consectetur.', score: '2.6x' }
+      { img: 'https://images.weserv.nl/?url=https://i.ytimg.com/vi/bzYx2J6VBwU/hqdefault.jpg', title: '7 Signs He’s Not Into You', score: '3.1x' },
+      { img: 'https://images.weserv.nl/?url=https://i.ytimg.com/vi/dyR_dMMLY6s/hqdefault.jpg', title: 'The Secret To Making Him Chase', score: '2.8x' }
     ]
   },
   {
     id: 'yomi',
+    channelId: 'UChgE6R4QauGAJAlYiJOcCGw', // Yomi Denzel (as per user ID)
     name: 'Yomi Denzel',
-    avatar: 'https://i.pravatar.cc/150?img=68',
-    subs: '1.45M subscribers',
-    quote: 'Working on these thumbnails changed the game. The attention to detail and psychology behind every pixel is unmatched.',
+    avatar: 'https://ui-avatars.com/api/?name=Yomi+Denzel&background=b9975b&color=fff',
+    subs: '5.4M subscribers',
+    quote: "Professional, skilled, and understands the psychology behind a click. Moiz transformed our packaging strategy.",
     helpTitle: 'How I helped them?',
-    helpDesc: 'We focused on high-contrast storytelling that stops the scroll immediately in a competitive finance niche.',
+    helpDesc: 'Collaborated on streamlining the business-focused content strategy, ensuring every thumbnail communicates value instantly.',
     results: [
-      { img: '/1st-row-images/img-3.webp', title: 'Finance niche optimization', score: '3.1x' },
-      { img: '/1st-row-images/img-4.webp', title: 'CTR improvement analysis.', score: '2.8x' }
+      { img: 'https://images.weserv.nl/?url=https://i.ytimg.com/vi/e8FT3vgUdX4/hqdefault.jpg', title: 'How I Made 6075€ in 46 Days Dropshipping', score: '2.6x' },
+      { img: 'https://images.weserv.nl/?url=https://i.ytimg.com/vi/fDGRbDt5px0/hqdefault.jpg', title: 'Cette IA va me Rendre Milliardaire', score: '3.4x' }
     ]
   },
   {
     id: 'henry',
+    channelId: 'UCWCQQJqj0YFlKecTibshBcw', // Henry Hoops
     name: 'Henry Hoops',
-    avatar: 'https://ui-avatars.com/api/?name=HH&background=111&color=fff',
-    subs: '354K subscribers',
-    quote: 'The growth was immediate. Finally, my thumbnails reflect the quality of my basketball analysis.',
+    avatar: '/trusted-by-images/henry-hoops.webp',
+    subs: '1.2M subscribers',
+    quote: "Moiz is my go-to Thumbnail Designer. He re-creates the vision perfectly and has increased his skills to stay up to date. Highly Recommend!",
     helpTitle: 'How I helped them?',
-    helpDesc: 'Sports commentary requires fast-paced visual hooks. We delivered exactly that.',
+    helpDesc: 'Modernized the visual identity for Henry Hoops, using AI-enhanced design techniques to stay ahead of YouTube trends.',
     results: [
-      { img: '/1st-row-images/img-5.webp', title: 'Basketball niche growth', score: '2.2x' },
-      { img: '/1st-row-images/img-6.webp', title: 'Viewer retention visuals.', score: '2.5x' }
+      { img: 'https://images.weserv.nl/?url=https://i.ytimg.com/vi/ZbgsfeOW3Vo/hqdefault.jpg', title: 'The Ultimate Guide to Henry Hoops', score: '2.9x' },
+      { img: 'https://images.weserv.nl/?url=https://i.ytimg.com/vi/2pIqo-jgPEg/hqdefault.jpg', title: 'How We Scaled to 1M Subs', score: '3.2x' }
     ]
   }
 ];
 
+const RiseChannelCard = ({ channel }) => {
+  const [clientInfo, setClientInfo] = useState({
+    subscriberCount: channel.subs,
+    avatar: channel.avatar
+  });
+
+  useEffect(() => {
+    const getChannel = async () => {
+      const data = await fetchChannelData(channel.channelId);
+      if (data) {
+        setClientInfo({
+          subscriberCount: data.subscriberCount + ' subscribers',
+          avatar: data.avatar
+        });
+      }
+    };
+    getChannel();
+  }, [channel.channelId]);
+
+  const channelUrl = `https://www.youtube.com/channel/${channel.channelId}`;
+
+  const extractVideoId = (url) => {
+    const match = url.match(/vi\/([^\/\?\&]+)/);
+    return match ? match[1] : null;
+  };
+
+  return (
+    <div className="rise-case-card">
+      {/* Left Side: Testimonial */}
+      <div className="rise-card-left">
+        <div 
+          className="rise-client-header"
+          onClick={() => window.open(channelUrl, '_blank')}
+          style={{ cursor: 'pointer' }}
+          title="Visit Channel"
+        >
+          <img src={clientInfo.avatar} alt={channel.name} className="rise-client-avatar" loading="lazy" referrerPolicy="no-referrer" />
+          <div className="rise-client-meta">
+            <h4 className="rise-client-name">{channel.name}</h4>
+            <p className="rise-client-subs">{clientInfo.subscriberCount}</p>
+          </div>
+        </div>
+        <blockquote className="rise-testimonial-text">
+          "{channel.quote}"
+        </blockquote>
+      </div>
+
+      {/* Middle Divider */}
+      <div className="rise-card-divider-vertical"></div>
+
+      {/* Right Side: Case Study */}
+      <div className="rise-card-right">
+        <h3 className="rise-help-title">{channel.helpTitle}</h3>
+        <p className="rise-help-desc">{channel.helpDesc}</p>
+        
+        <div className="rise-results-gallery">
+          {channel.results.map((res, idx) => {
+            const videoId = extractVideoId(res.img);
+            const videoUrl = videoId ? `https://www.youtube.com/watch?v=${videoId}` : '#';
+
+            return (
+              <div className="rise-result-item" key={idx}>
+                <div 
+                  className="rise-result-thumb-wrapper"
+                  onClick={() => videoId && window.open(videoUrl, '_blank')}
+                  style={{ cursor: videoId ? 'pointer' : 'default' }}
+                  title={videoId ? "Watch Video" : ""}
+                >
+                  <img src={res.img} alt="Result" className="rise-result-img" loading="lazy" referrerPolicy="no-referrer" />
+                </div>
+                <p className="rise-result-title">{res.title}</p>
+                <span className="rise-result-score-badge">{res.score}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const RiseChannels = () => {
   const [activeId, setActiveId] = useState('matthew');
+  const [fetchedAvatars, setFetchedAvatars] = useState({});
   const activeChannel = channelsData.find(c => c.id === activeId);
+
+  useEffect(() => {
+    // Fetch avatars for all channels to show in pills
+    channelsData.forEach(async (channel) => {
+      try {
+        const data = await fetchChannelData(channel.channelId);
+        if (data && data.avatar) {
+          setFetchedAvatars(prev => ({
+            ...prev,
+            [channel.id]: data.avatar
+          }));
+        }
+      } catch (err) {
+        console.error("Error fetching avatar for pill:", channel.id, err);
+      }
+    });
+  }, []);
 
   return (
     <section className="rise-channels-section">
       <div className="rise-channels-container">
-        
         <h2 className="rise-section-title">
           Let's hear from some newer <br /> channels that are on the rise.
         </h2>
@@ -63,52 +165,19 @@ const RiseChannels = () => {
               className={`channel-pill ${activeId === channel.id ? 'active' : ''}`}
               onClick={() => setActiveId(channel.id)}
             >
-              <img src={channel.avatar} alt={channel.name} className="pill-avatar" loading="lazy" />
+              <img 
+                src={fetchedAvatars[channel.id] || channel.avatar} 
+                alt={channel.name} 
+                className="pill-avatar" 
+                loading="lazy" 
+                referrerPolicy="no-referrer"
+              />
               <span className="pill-name">{channel.name}</span>
             </button>
           ))}
         </div>
 
-        {/* Display Card (reusing split-card style) */}
-        <div className="rise-case-card">
-              
-              {/* Left Side: Testimonial */}
-              <div className="rise-card-left">
-                <div className="rise-client-header">
-                  <img src={activeChannel.avatar} alt={activeChannel.name} className="rise-client-avatar" loading="lazy" />
-                  <div className="rise-client-meta">
-                    <h4 className="rise-client-name">{activeChannel.name}</h4>
-                    <p className="rise-client-subs">{activeChannel.subs}</p>
-                  </div>
-                </div>
-                <blockquote className="rise-testimonial-text">
-                  "{activeChannel.quote}"
-                </blockquote>
-              </div>
-
-              {/* Middle Divider */}
-              <div className="rise-card-divider-vertical"></div>
-
-              {/* Right Side: Case Study */}
-              <div className="rise-card-right">
-                <h3 className="rise-help-title">{activeChannel.helpTitle}</h3>
-                <p className="rise-help-desc">{activeChannel.helpDesc}</p>
-                
-                <div className="rise-results-gallery">
-                  {activeChannel.results.map((res, idx) => (
-                    <div className="rise-result-item" key={idx}>
-                      <div className="rise-result-thumb-wrapper">
-                        <img src={res.img} alt="Result" className="rise-result-img" loading="lazy" />
-                      </div>
-                      <p className="rise-result-title">{res.title}</p>
-                      <span className="rise-result-score-badge">{res.score}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-        </div>
-
+        <RiseChannelCard channel={activeChannel} />
       </div>
     </section>
   );
