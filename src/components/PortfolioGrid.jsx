@@ -274,7 +274,7 @@ const PortfolioCard = ({ item }) => {
             </svg>
           </button>
         </div>
-
+ 
         <div className="card-info-area">
           <div className="author-row">
             <img src={channelInfo.avatar} alt="Avatar" className="author-avatar" referrerPolicy="no-referrer" />
